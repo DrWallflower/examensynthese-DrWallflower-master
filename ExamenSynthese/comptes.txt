@@ -1,7 +1,0 @@
-C;101;Nestor;Vézina
-C;102;Victor;Nolin
-E;103;Estelle;Simard
-R;104;Ronald;Chiasson;2500
-E;105;Victor;Nolin
-R;106;Colette;Vézina;1000
-R;107;Justine;Labelle;2100
