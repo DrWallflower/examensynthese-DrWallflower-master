@@ -52,9 +52,6 @@ namespace ExamenSynthese
     }
 
 
-
-
-
     /// <summary>
     /// Base de tous les menus de l'application
     /// </summary>
@@ -69,8 +66,6 @@ namespace ExamenSynthese
             _titreMenu = titreMenu;
              
         }
-
-
 
         /// <summary>
         /// Affiche le menu et demande le choix de l'utilisateur.
@@ -207,10 +202,6 @@ namespace ExamenSynthese
             _listeOptions.Add(optionMenu.ToString());
         }
     }
-
-
-
-
 
     /// <summary>
     /// Menu des transactions
