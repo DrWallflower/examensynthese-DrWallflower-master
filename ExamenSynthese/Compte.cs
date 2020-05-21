@@ -139,12 +139,7 @@ namespace ExamenSynthese
                 {
                     string[] informationsClient = ligne.Split(';');
 
-                    string numeroCompte = informationsClient[0];
-
-
-
-
-
+                    string numero = informationsClient[0];
 
                     string typeTransaction = informationsClient[1];
 
@@ -162,18 +157,20 @@ namespace ExamenSynthese
 
                     string date = informationsClient[3];
 
-                    string concat = (date + "  " + typeTransaction + "       " + montant.ToString("n2") + " $   Solde:   ");
+                    string concat = (date + "  " + typeTransaction + "       " + montant.ToString("n2") + " $   Solde:   "); // Ajouter le solde
 
-                    liste.Add(concat);
+                    if (true) // Ajouter le numero du compte
+                    {
+                        liste.Add(concat);
+                    }
+                    
 
                     ligne = fichierLecture.ReadLine();
                 }
 
-                liste.Sort();
-                foreach (var compte in liste)
-                {
-                    liste.Add(compte.ToString());
-                }
+
+                liste.Reverse();
+                
             }
 
             return liste;

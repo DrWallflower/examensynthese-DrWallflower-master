@@ -77,7 +77,7 @@ namespace ExamenSynthese
         /// Réaffiche le menu en boucle tant qu'une option valide n'est pas donnée.
         /// </summary>
         /// <returns>Le caractère valide donné par l'utilisateur</returns>
-        public char Afficher() // ToCheck
+        public virtual char Afficher() // ToCheck
         {
 
             string infos01 = _listeOptions[0];
@@ -95,9 +95,11 @@ namespace ExamenSynthese
             string infos04 = _listeOptions[3];
             string[] infosDivises04 = infos04.Split(')');
             char infoOption04 = Convert.ToChar(infosDivises04[0].Substring(1, 1));
-            
+
 
             // Afficher le menu voulu
+
+            Console.Clear();
 
             Console.WriteLine("================================================================================");
             Console.WriteLine("= " + _titreMenu + "                                                                       =");
@@ -179,9 +181,7 @@ namespace ExamenSynthese
         public void AjouterOption(OptionMenu optionMenu)
         {
             _listeOptions.Add(optionMenu.ToString());
-        }
-
-        
+        }     
     }
 
     /// <summary>
@@ -202,9 +202,9 @@ namespace ExamenSynthese
             AjouterOption(new OptionMenu('Q', "Retour au menu principal"));
         }
 
-        private void AjouterOption(OptionMenu optionMenu) // ToCheck
+        public void AjouterOption(OptionMenu optionMenu) // ToCheck
         {
-            throw new NotImplementedException();
+            _listeOptions.Add(optionMenu.ToString());
         }
     }
 
@@ -229,9 +229,9 @@ namespace ExamenSynthese
             AjouterOption(new OptionMenu('Q', "Retour au menu principal"));
         }
 
-        private void AjouterOption(OptionMenu optionMenu) // ToCheck
+        public void AjouterOption(OptionMenu optionMenu) // ToCheck
         {
-            throw new NotImplementedException();
+            _listeOptions.Add(optionMenu.ToString());
         }
     }
 
